@@ -2,9 +2,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
-const locales = ['en', 'fr', 'es', 'pt']; // Adicionado 'pt' para suporte ao português
+const locales = ['pt']; 
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -15,6 +16,13 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+
+        type: 'asset/resource',
+
       },
     ],
   },
@@ -29,5 +37,6 @@ module.exports = {
       /date-fns[/\\]locale$/,
       new RegExp(`(${locales.join('|')})\.mjs$`)
     ),
+    
   ],
 };
