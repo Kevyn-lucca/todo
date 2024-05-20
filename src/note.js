@@ -17,7 +17,10 @@ export default class Note {
 
         const content = document.createElement('div');
         const HeadContent = document.createElement('div');
+
         HeadContent.classList.add("Head-Class");
+
+  
 
         const title = document.createElement("input");
         title.classList.add("title-class");

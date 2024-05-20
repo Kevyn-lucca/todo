@@ -1,13 +1,15 @@
 body{
     display: grid;
-    grid-template-columns: 15rem  1fr;
+    grid-template-columns:  1fr;
     grid-template-rows: repeat(2,9rem);
 }
 
 .side-bar-button{
-    background-color: red;
+    background-color: lightblue;
     border: none;
     color: black;
+    border-radius: 20px;
+    padding: 1rem;
 }
 
 .side-bar-button:hover{
@@ -16,33 +18,13 @@ body{
     color: blue;
 }
 
-#side-bar-content{
-    grid-row: 1;
-    height: 100vh;
-    grid-column: 1;
-    background-color: red;
-}
-
-#side-bar-content > ul{
-    list-style: none;
-}
-
-#side-bar-content > ul > li{
-    margin-top: 2rem;
-
-}
-
-#Title-sidebar{
-    font-size: 2rem;
-    font-weight: bolder;
-}
 
 #list-content{
     display: flex;
     flex-direction: column;
-    margin-left: 20%;
+    margin-left: 25%;
     grid-row: 2;
-    grid-column: 2;
+    grid-column: 1;
     gap: 3rem;
     overflow: scroll;
     height: 500px;
@@ -50,7 +32,7 @@ body{
 
 header{
     grid-row: 1;
-    grid-column: 2/2;
+    grid-column: 1/2;
     place-content: center;
     text-align: center;
 }
